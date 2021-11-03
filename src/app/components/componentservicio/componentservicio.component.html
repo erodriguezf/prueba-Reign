@@ -1,2 +1,43 @@
+<!--select class="form-select Rectangle-26-Copy-23" >
+    <option  class="Text"> Select your news </option>
+    <option class="Angular" (mouseover)="Angular()">  <img src="../../../assets/img/image-138.jpg" width="10px" height="10px"   class="Image-138">Angular </option>
+    <option class="Reacts" > <img src="../../../assets/img/image-140.jpg">Reacts </option>
+    <option class="Vuejs" > <img src="../../../assets/img/image-141.jpg">Vuejs</option>
+</select-->
 
 
+    
+    <mat-select class="Rectangle-26-Copy-23" >
+      <mat-option class="Text">Select your news</mat-option>
+      <mat-option *ngFor="let state of states" [value]="state" (click)="Angular(state)" >
+    
+        <span class="Angular" *ngIf="state.Name=='Angular'">  <img src="{{state.Img}}" class="Image-138" *ngIf="state.Name=='Angular'">  {{state.Name}} </span> 
+        <span class="Reacts" *ngIf="state.Name=='Reacts'">  <img src="{{state.Img}}" class="Image-140" >  {{state.Name}} </span> 
+        <span class="Vuejs" *ngIf="state.Name=='Vuejs'">  <img src="{{state.Img}}"class="Image-1"  >  {{state.Name}} </span> 
+      </mat-option>
+        
+    </mat-select>
+
+    <div *ngIf="urln == url1">
+        <ul *ngFor="let r1 of rta">
+            <li>{{r1.author}}</li>
+        </ul>
+
+    </div>
+
+    <div *ngIf="urln == url2">
+        <ul *ngFor="let r2 of rta1">
+            <li>{{r2.author}}</li>
+        </ul>
+
+    </div>
+
+    <div *ngIf="urln == url3">
+        <ul *ngFor="let r3 of rta2">
+            <li>{{r3.author}}</li>
+        </ul>
+
+    </div>
+
+    
+  

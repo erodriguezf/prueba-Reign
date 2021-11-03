@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {MatSelectModule} from '@angular/material';
 
 
 @Component({
@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Prueba-R';
+  visible=false;
+ 
 }
