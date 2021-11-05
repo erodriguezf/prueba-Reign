@@ -95,6 +95,7 @@
     border-radius: 6px;
     border: solid 1px #979797;
     background-color: #fff;
+    
   }
 
   .Rectangle1 {
@@ -105,14 +106,16 @@
   .Rectangle2 {
     width: 68px;
     height: 90px;
-    margin: -84px 0 0 465px;
+    margin: -84px 0 0 467px;
    /* padding: 35px 22px 33px;*/
     justify-content: end;
-    opacity: 0.06;
+    /*opacity: 0.06;*/
     border-radius: 6px;
-    border: solid 1px #606060;
-    background-color: #606060;
+    border: solid 1px #60606006;
+    background-color: #60606010;
   }
+
+  
 
   .Realize-for-React-fo {
     width: 440px;
@@ -156,3 +159,49 @@
   .Reactangule6{
     margin-top: 18px;
   }
+
+  img.iconmonstr-favorite-2 {
+    width: 24px;
+    height: 22px;
+    object-fit: contain;
+    margin-top: 35px;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-align: center;
+    position: relative;
+  }
+
+  /*.Shape > img.iconmonstr-favorite-2{
+    width: 24px;
+    height: 22px;
+    
+  }*/
+
+  .Rectangle2 img.iconmonstr-favorite-2{
+    position: absolute;
+   
+  }
+  img.iconmonstr-favorite-3 {
+    width: 24px;
+    height: 22px;
+    object-fit: contain;
+    margin-top: 35px;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-align: center;
+    position: relative;
+  }
+
+  .Rectangle:hover{
+    width: 550px;
+   height: 90px;
+   margin: 30px 150px 30px 40px;
+   padding: 0 0 0 26px;
+   opacity: 0.4;
+   border-radius: 6px;
+   border: solid 1px #979797;
+   background-color: #fff;
+  
+  }
+ 
+ 

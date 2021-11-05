@@ -52,20 +52,7 @@ export class ComponentservicioComponent implements OnInit {
    }
  ];
  
- /*Angular(state){
-  console.log(state.Name);
-  this.urln=" ";
-    if(state.Name == "Angular"){
-       this.urln=this.url1;
-    }
-    if(state.Name == "Reacts"){
-      this.urln=this.url2;
-   }
-   if(state.Name == "Vuejs"){
-    this.urln=this.url3;
-   }
-   console.log(this.urln);
-} */
+
   fecha: Date= new Date();
   oneday = 24 * 60 * 60 ;
   ngOnInit() {
@@ -75,7 +62,7 @@ export class ComponentservicioComponent implements OnInit {
      this.conversion=data;
      this.rta=this.conversion.hits;
      
-     //this.rta=this.objeto;
+     
     
     
      console.log('prueba: ', this.rta);
@@ -85,7 +72,7 @@ export class ComponentservicioComponent implements OnInit {
     .subscribe(data =>{
      this.conversion1=data;
      this.rta1=this.conversion1.hits;
-     //this.rta=this.objeto;
+     
      console.log('prueba1: ', this.rta1);
    
     });
@@ -93,7 +80,7 @@ export class ComponentservicioComponent implements OnInit {
     .subscribe(data =>{
      this.conversion2=data;
      this.rta2=this.conversion2.hits;
-     //this.rta=this.objeto;
+    
      console.log('prueba2: ', this.rta2);
    
     });
@@ -122,6 +109,30 @@ export class ComponentservicioComponent implements OnInit {
      console.log('urln: ', this.urln);
     
     }
+
+    abrirLink(url: string){
+     
+      if(url == null){
+        window.open("https://i.blogs.es/3951b6/error404/1366_2000.jpg", "_blank");
+      }else{
+        window.open(url, "_blank");
+      }
+     }
+      imagen1="../../../assets/img/iconmonstr-favorite-2.png";
+      imagen2="../../../assets/img/iconmonstr-favorite-3.png";
+      imagen= this.imagen1;
+     changue(){
+       if(this.imagen==this.imagen1){
+            this.imagen=this.imagen2;
+            console.log('imagen1');
+       }else{
+           this.imagen=this.imagen1;
+           console.log('imagen2');
+       }
+       console.log(this.imagen);
+     }
+
+
 
    
 
