@@ -1,6 +1,6 @@
 
      <mat-select class="Rectangle-26-Copy-23" >
-      <!--mat-option class="Text">Select your news</mat-option-->
+      
       <mat-option *ngFor="let state of states" [value]="state" (click)="Angular(state)" >
         <span class="Text" *ngIf="state.Name=='Select your news'">{{state.Name}} </span>
         <span class="Angular" *ngIf="state.Name=='Angular'">  <img src="{{state.Img}}" class="Image-138" >  {{state.Name}} </span> 
@@ -96,7 +96,6 @@
         </div>
     </div>
 
-    
 
     
   
