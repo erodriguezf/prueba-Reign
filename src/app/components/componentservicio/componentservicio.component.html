@@ -8,35 +8,100 @@
 
     
     <mat-select class="Rectangle-26-Copy-23" >
-      <mat-option class="Text">Select your news</mat-option>
+      <!--mat-option class="Text">Select your news</mat-option-->
       <mat-option *ngFor="let state of states" [value]="state" (click)="Angular(state)" >
-    
-        <span class="Angular" *ngIf="state.Name=='Angular'">  <img src="{{state.Img}}" class="Image-138" *ngIf="state.Name=='Angular'">  {{state.Name}} </span> 
+        <span class="Text" *ngIf="state.Name=='Select your news'">{{state.Name}} </span>
+        <span class="Angular" *ngIf="state.Name=='Angular'">  <img src="{{state.Img}}" class="Image-138" >  {{state.Name}} </span> 
         <span class="Reacts" *ngIf="state.Name=='Reacts'">  <img src="{{state.Img}}" class="Image-140" >  {{state.Name}} </span> 
-        <span class="Vuejs" *ngIf="state.Name=='Vuejs'">  <img src="{{state.Img}}"class="Image-1"  >  {{state.Name}} </span> 
+        <span class="Vuejs" *ngIf="state.Name=='Vuejs'">  <img src="{{state.Img}}"class="Image-141"  >  {{state.Name}} </span> 
       </mat-option>
         
     </mat-select>
 
     <div *ngIf="urln == url1">
-        <ul *ngFor="let r1 of rta">
-            <li>{{r1.author}}</li>
-        </ul>
+      <div *ngFor="let r1 of rta" class="col">
+          <div class="Rectangle">
+              <div class="row">
+                <div class="Rectangle1">
+                   <div class="row Reactangule6">
+                     <div class="col-1 ">
+                      <img src="../../../assets/img/iconmonstr-time-2.png"
+                      srcset="../../../assets/img/iconmonstr-time-2@2x.png 2x,
+                      ../../../assets/img/iconmonstr-time-2@3x.png 3x"
+                      class="iconmonstr-time-2">
+                     </div>
+                     <div class="col-7 ">
+                      <span class="-hours-ago-by-autho">
+                       Realized in {{r1.created_at | date:'MMMM dd'}} at {{r1.created_at | date:'HH:mm'}}  by {{r1.author}}
+                      </span>
+                     </div>
+                    </div>
+                  <div class="Realize-for-React-fo">{{r1.story_title}}</div>
+                </div>
+                 <div class="Rectangle2 ">
 
-    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
 
     <div *ngIf="urln == url2">
-        <ul *ngFor="let r2 of rta1">
-            <li>{{r2.author}}</li>
-        </ul>
+        <div *ngFor="let r2 of rta1" class="col">
+            <div class="Rectangle">
+                <div class="row">
+                  <div class="Rectangle1">
+                    <div class="row Reactangule6">
+                      <div class="col-1 ">
+                       <img src="../../../assets/img/iconmonstr-time-2.png"
+                       srcset="../../../assets/img/iconmonstr-time-2@2x.png 2x,
+                       ../../../assets/img/iconmonstr-time-2@3x.png 3x"
+                       class="iconmonstr-time-2">
+                      </div>
+                      <div class="col-7 ">
+                       <span class="-hours-ago-by-autho">
+                        Realized in {{r2.created_at | date:'MMMM dd'}} at {{r2.created_at | date:'HH:mm'}}  by {{r2.author}}
+                       </span>
+                      </div>
+                     </div>
+                    <div class="Realize-for-React-fo">{{r2.story_title}}</div>
+                  </div>
+                   <div class="Rectangle2 ">
+
+                  </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
     <div *ngIf="urln == url3">
-        <ul *ngFor="let r3 of rta2">
-            <li>{{r3.author}}</li>
-        </ul>
+        <div *ngFor="let r3 of rta2" class="col">
+            <div class="Rectangle">
+                <div class="row">
+                  <div class="Rectangle1">
+                    <div class="row Reactangule6">
+                      <div class="col-1 ">
+                       <img src="../../../assets/img/iconmonstr-time-2.png"
+                       srcset="../../../assets/img/iconmonstr-time-2@2x.png 2x,
+                       ../../../assets/img/iconmonstr-time-2@3x.png 3x"
+                       class="iconmonstr-time-2">
+                      </div>
+                      <div class="col-7 ">
+                       <span class="-hours-ago-by-autho">
+                        Realized in {{r3.created_at | date:'MMMM dd'}} at {{r3.created_at | date:'HH:mm'}}  by {{r3.author}}
+                       </span>
+                      </div>
+                     </div>
+                    <div class="Realize-for-React-fo">{{r3.story_title}}</div>
+                  </div>
+                   <div class="Rectangle2 ">
 
+                  </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     

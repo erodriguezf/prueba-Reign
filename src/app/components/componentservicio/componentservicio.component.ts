@@ -12,8 +12,10 @@ import {HttpClientModule} from '@angular/common/http';
 export class ComponentservicioComponent implements OnInit {
 
 
-  constructor(private http:HttpClient ) { }
-
+  constructor(private http:HttpClient ) {
+    
+   }
+ 
 
   rta: [];
   conversion: any;
@@ -26,7 +28,13 @@ export class ComponentservicioComponent implements OnInit {
   url2="https://hn.algolia.com/api/v1/search_by_date?query=reactjs&page=0";
   url3="https://hn.algolia.com/api/v1/search_by_date?query=vuejs&page=0";
   urln=" ";
+  transforms: any;
   states = [
+    {
+      Name:'Select your news',
+      Img: ' ',
+      urlx: ' '
+     },
     {
     Name:'Angular',
     Img: '../../../assets/img/image-138.png',
@@ -41,9 +49,10 @@ export class ComponentservicioComponent implements OnInit {
     Name:'Vuejs',
     Img: '../../../assets/img/image-141.png',
     urlx: 'https://hn.algolia.com/api/v1/search_by_date?query=vuejs&page=0'
-   },
-];
-/*Angular(state){
+   }
+ ];
+ 
+ /*Angular(state){
   console.log(state.Name);
   this.urln=" ";
     if(state.Name == "Angular"){
@@ -57,15 +66,20 @@ export class ComponentservicioComponent implements OnInit {
    }
    console.log(this.urln);
 } */
+  fecha: Date= new Date();
+  oneday = 24 * 60 * 60 ;
   ngOnInit() {
     
     this.http.get(this.url1)
     .subscribe(data =>{
      this.conversion=data;
      this.rta=this.conversion.hits;
+     
      //this.rta=this.objeto;
+    
+    
      console.log('prueba: ', this.rta);
-   
+     
     });
     this.http.get(this.url2)
     .subscribe(data =>{
@@ -84,14 +98,16 @@ export class ComponentservicioComponent implements OnInit {
    
     });
   }
-  
+
+ 
   Angular(state){
-    console.log(state.Name);
-    this.urln=" ";
+      console.log(state.Name);
+       this.urln=" ";
       if(state.Name == "Angular"){
          this.urln=this.url1;
          console.log('urln: ', this.urln);
          console.log(this.rta);
+        
       }
       if(state.Name == "Reacts"){
         this.urln=this.url2;
@@ -104,6 +120,9 @@ export class ComponentservicioComponent implements OnInit {
       console.log(this.rta2);
      }
      console.log('urln: ', this.urln);
+    
     }
+
+   
 
 }
