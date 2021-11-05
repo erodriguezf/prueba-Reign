@@ -112,11 +112,7 @@ export class ComponentservicioComponent implements OnInit {
 
     abrirLink(url: string){
      
-      if(url == null){
-        window.open("https://i.blogs.es/3951b6/error404/1366_2000.jpg", "_blank");
-      }else{
         window.open(url, "_blank");
-      }
      }
       imagen1="../../../assets/img/iconmonstr-favorite-2.png";
       imagen2="../../../assets/img/iconmonstr-favorite-3.png";
